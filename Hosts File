@@ -1,0 +1,5 @@
+*Arquivo Hosts*
+
+vi /etc/hosts
+
+<IP-address>  <fully-qualified-machine-name>  <machine-name>
