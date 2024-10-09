@@ -1,0 +1,16 @@
+# Setando a senha do usuário oracle:
+
+passwd oracle
+
+# Alterando a permissão do SELINUX:
+
+vi /etc/selinux/config
+
+SELINUX=permissive
+
+setenforce Permissive
+
+# Desabilitando o FireWall:
+
+systemctl stop firewalld
+systemctl disable firewalld
