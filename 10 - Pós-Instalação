@@ -1,0 +1,11 @@
+# Editar o arquivo /etc/oratab para restartar a instância:
+
+cdb1:/u01/app/oracle/product/19.0.0/dbhome_1:Y
+
+# Habilitar o Oracle Managed Files (OMF) para garantir que o PDB suba quando a instância startar:
+
+sqlplus / as sysdba <<EOF
+alter system set db_create_file_dest='${DATA_DIR}';
+alter pluggable database ${PDB_NAME} save state;
+exit;
+EOF
